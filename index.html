@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Your Project Description">
-  <meta name="keywords" content="AI, Machine Learning, Research">
+  <meta name="description" content="SLAM-Dunk-Prometheus: Real-time LiDAR-IMU SLAM with 3D Segmentation">
+  <meta name="keywords" content="SLAM, LiDAR, IMU, 3D Segmentation, Computer Vision, Robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Project Title</title>
+  <title>SLAM-Dunk-Prometheus</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -23,18 +23,27 @@
 
     .hero-body {
       padding: 3rem 1.5rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
 
     .publication-title {
       font-family: 'Google Sans', sans-serif;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      color: white;
+    }
+
+    .publication-subtitle {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
     }
 
     .publication-authors {
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
+      color: white;
     }
 
     .author-block {
@@ -48,6 +57,11 @@
 
     .publication-links .button {
       margin: 0.3rem;
+      transition: transform 0.2s;
+    }
+
+    .publication-links .button:hover {
+      transform: translateY(-2px);
     }
 
     .section {
@@ -61,7 +75,8 @@
     h2.title {
       font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      color: #363636;
     }
 
     .content {
@@ -78,13 +93,77 @@
       max-width: 100%;
       height: auto;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    .module-card {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #667eea;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .module-card h3 {
+      color: #667eea;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .demo-placeholder {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border: 2px dashed #667eea;
+      border-radius: 8px;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .demo-placeholder p {
+      color: #667eea;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
 
     footer {
       padding: 2rem;
       background-color: #f5f5f5;
       text-align: center;
+    }
+
+    .tag-container {
+      margin: 1rem 0;
+    }
+
+    .tag {
+      margin: 0.2rem;
     }
   </style>
 </head>
@@ -96,64 +175,39 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="publication-title">Your Amazing Project Title</h1>
+            <h1 class="publication-title">SLAM-Dunk-Prometheus</h1>
+            <p class="publication-subtitle">Real-time LiDAR-IMU SLAM with Advanced 3D Segmentation</p>
+            
             <div class="publication-authors">
               <span class="author-block">
-                <a href="#">Author Name 1</a><sup>1</sup>,
+                Prometheus Team
               </span>
-              <span class="author-block">
-                <a href="#">Author Name 2</a><sup>2</sup>,
-              </span>
-              <span class="author-block">
-                <a href="#">Author Name 3</a><sup>1</sup>
-              </span>
-            </div>
-
-            <div class="publication-authors">
-              <span class="author-block"><sup>1</sup>Your University,</span>
-              <span class="author-block"><sup>2</sup>Your Company</span>
             </div>
 
             <!-- Links -->
             <div class="publication-links">
               <span class="link-block">
-                <a href="#" class="button is-dark is-rounded">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="button is-dark is-rounded">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="button is-dark is-rounded">
-                  <span class="icon">
-                    <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#" class="button is-dark is-rounded">
+                <a href="https://github.com/SLAM-Dunk-Prometheus/SLAM-Pipeline" class="button is-light is-rounded">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>SLAM Pipeline</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="#" class="button is-dark is-rounded">
+                <a href="https://github.com/SLAM-Dunk-Prometheus/Segmentation" class="button is-light is-rounded">
                   <span class="icon">
-                    <i class="fas fa-database"></i>
+                    <i class="fab fa-github"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Segmentation</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/SLAM-Dunk-Prometheus" class="button is-light is-rounded">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub Organization</span>
                 </a>
               </span>
             </div>
@@ -168,14 +222,17 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title">Abstract</h2>
+          <h2 class="title">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              Your abstract goes here. Describe your research problem, approach, and main contributions.
-              This section should give readers a quick overview of what your project is about and why it matters.
+              SLAM-Dunk-Prometheus is a comprehensive robotics perception system that combines real-time LiDAR-IMU SLAM 
+              with state-of-the-art 3D semantic segmentation. Our pipeline enables accurate localization, mapping, 
+              and scene understanding for autonomous systems and robotics applications.
             </p>
             <p>
-              Add more details about your methodology and results. Make it compelling and informative!
+              The system consists of two main components: a robust SLAM pipeline for real-time pose estimation and 
+              map building, and an advanced segmentation module that provides semantic understanding of 3D environments 
+              using cutting-edge deep learning models.
             </p>
           </div>
         </div>
@@ -183,18 +240,17 @@
     </div>
   </section>
 
-  <!-- Teaser Image/Video -->
+  <!-- Demo Panel -->
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title">Teaser</h2>
-          <div class="image-container">
-            <img src="https://via.placeholder.com/800x400?text=Your+Teaser+Image" alt="Teaser">
-          </div>
-          <div class="content has-text-justified">
-            <p>
-              Caption for your teaser image or video. Explain what viewers are looking at.
+          <h2 class="title">Demo Panel</h2>
+          <div class="demo-placeholder">
+            <p><i class="fas fa-image fa-3x" style="margin-bottom: 1rem;"></i></p>
+            <p>Demo panel images will be added here</p>
+            <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem;">
+              Showcasing real-time SLAM results and segmentation visualizations
             </p>
           </div>
         </div>
@@ -202,56 +258,141 @@
     </div>
   </section>
 
-  <!-- Method -->
-  <section class="section">
+  <!-- System Architecture -->
+  <section class="section" style="background-color: #fafafa;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title has-text-centered">Method</h2>
-          <div class="content has-text-justified">
-            <p>
-              Describe your methodology here. You can add diagrams, equations, and detailed explanations.
-            </p>
+          <h2 class="title has-text-centered">System Modules</h2>
+          
+          <div class="module-card">
+            <h3><i class="fas fa-compass"></i> SLAM Pipeline</h3>
+            <div class="content">
+              <p>
+                Real-time LiDAR-IMU SLAM system optimized for the StrayScanner dataset. 
+                Features include:
+              </p>
+              <ul>
+                <li>High-frequency LiDAR and IMU sensor fusion</li>
+                <li>Real-time pose estimation and trajectory optimization</li>
+                <li>Efficient point cloud processing and map building</li>
+                <li>Comprehensive data preprocessing and post-processing tools</li>
+              </ul>
+              <div class="tag-container">
+                <span class="tag is-info">Python</span>
+                <span class="tag is-info">LiDAR</span>
+                <span class="tag is-info">IMU</span>
+                <span class="tag is-info">Real-time</span>
+              </div>
+            </div>
           </div>
-          <div class="image-container">
-            <img src="https://via.placeholder.com/800x400?text=Method+Overview" alt="Method">
+
+          <div class="module-card">
+            <h3><i class="fas fa-brain"></i> 3D Segmentation</h3>
+            <div class="content">
+              <p>
+                Advanced 3D semantic segmentation using state-of-the-art deep learning models. 
+                Capabilities include:
+              </p>
+              <ul>
+                <li>Mosaic3D and OpenScene model integration</li>
+                <li>Real-time point cloud semantic labeling</li>
+                <li>Interactive visualization tools for segmented scenes</li>
+                <li>Comprehensive demo codes for easy deployment</li>
+              </ul>
+              <div class="tag-container">
+                <span class="tag is-success">Python</span>
+                <span class="tag is-success">Deep Learning</span>
+                <span class="tag is-success">3D Vision</span>
+                <span class="tag is-success">Semantic Segmentation</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Results -->
+  <!-- Demo Video -->
   <section class="section">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title has-text-centered">Results</h2>
-          <div class="content has-text-justified">
-            <p>
-              Show off your results! Add images, videos, comparisons, and quantitative results.
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title">Demo Video</h2>
+          <div class="demo-placeholder">
+            <p><i class="fas fa-video fa-3x" style="margin-bottom: 1rem;"></i></p>
+            <p>System demonstration video will be embedded here</p>
+            <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem;">
+              Showing the complete pipeline in action
             </p>
-          </div>
-          <div class="image-container">
-            <img src="https://via.placeholder.com/800x400?text=Your+Results" alt="Results">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BibTeX -->
+  <!-- Technical Details -->
+  <section class="section" style="background-color: #fafafa;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title has-text-centered">Technical Highlights</h2>
+          <div class="content has-text-justified">
+            <div class="columns">
+              <div class="column">
+                <h3 style="color: #667eea;"><i class="fas fa-rocket"></i> Performance</h3>
+                <p>
+                  Optimized for real-time operation with efficient algorithms and parallel processing. 
+                  Achieves high frame rates while maintaining accuracy in pose estimation and segmentation.
+                </p>
+              </div>
+              <div class="column">
+                <h3 style="color: #667eea;"><i class="fas fa-database"></i> Dataset Support</h3>
+                <p>
+                  Built specifically for the StrayScanner dataset but extensible to other LiDAR-IMU datasets. 
+                  Includes comprehensive preprocessing tools for data preparation.
+                </p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <h3 style="color: #667eea;"><i class="fas fa-cogs"></i> Modular Design</h3>
+                <p>
+                  Separated SLAM and segmentation modules allow flexible integration. 
+                  Each component can be used independently or combined for complete scene understanding.
+                </p>
+              </div>
+              <div class="column">
+                <h3 style="color: #667eea;"><i class="fas fa-code"></i> Open Source</h3>
+                <p>
+                  All code is publicly available on GitHub under permissive licenses. 
+                  Comprehensive documentation and demo codes facilitate easy adoption.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting Started -->
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title has-text-centered">BibTeX</h2>
-          <pre><code>@article{yourname2024project,
-  title={Your Amazing Project Title},
-  author={Your Name and Collaborators},
-  journal={Conference/Journal Name},
-  year={2024}
-}</code></pre>
+          <h2 class="title has-text-centered">Getting Started</h2>
+          <div class="content">
+            <h3>SLAM Pipeline</h3>
+            <pre><code>git clone https://github.com/SLAM-Dunk-Prometheus/SLAM-Pipeline.git
+cd SLAM-Pipeline
+# Follow installation instructions in the repository README</code></pre>
+
+            <h3>3D Segmentation</h3>
+            <pre><code>git clone https://github.com/SLAM-Dunk-Prometheus/Segmentation.git
+cd Segmentation
+# Follow installation instructions in the repository README</code></pre>
+          </div>
         </div>
       </div>
     </div>
@@ -262,6 +403,14 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
+          <strong>SLAM-Dunk-Prometheus</strong> by the Prometheus Team
+        </p>
+        <p>
+          <a href="https://github.com/SLAM-Dunk-Prometheus">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
           Website template based on <a href="https://nerfies.github.io/">Nerfies</a>.
         </p>
       </div>
