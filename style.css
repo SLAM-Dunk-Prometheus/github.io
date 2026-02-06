@@ -146,3 +146,7 @@ footer {
 .tag {
   margin: 0.2rem;
 }
+
+.panel-image {
+  max-width: 70%;
+}
