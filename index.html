@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="SLAM-Dunk-Prometheus: Real-time LiDAR-IMU SLAM with 3D Segmentation">
-  <meta name="keywords" content="SLAM, LiDAR, IMU, 3D Segmentation, Computer Vision, Robotics">
+  <meta name="description" content="SLAM-Dunk-Prometheus: 실시간 LiDAR-IMU SLAM과 3D 세그멘테이션">
+  <meta name="keywords" content="SLAM, LiDAR, IMU, 3D 세그멘테이션, 컴퓨터 비전, 로보틱스">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SLAM-Dunk-Prometheus</title>
 
@@ -21,14 +21,14 @@
 </head>
 
 <body>
-  <!-- Title Section -->
+  <!-- 제목 섹션 -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="publication-title">SLAM-Dunk-Prometheus</h1>
-            <p class="publication-subtitle">Real-time LiDAR-IMU SLAM with Advanced 3D Segmentation</p>
+            <p class="publication-subtitle">실시간 LiDAR-IMU SLAM과 고급 3D 세그멘테이션</p>
             
             <div class="publication-authors">
               <span class="author-block">
@@ -36,22 +36,14 @@
               </span>
             </div>
 
-            <!-- Links -->
+            <!-- 링크 -->
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://github.com/SLAM-Dunk-Prometheus/SLAM-Pipeline" class="button is-light is-rounded">
+                <a href="#demo-panel" class="button is-light is-rounded">
                   <span class="icon">
-                    <i class="fab fa-github"></i>
+                    <i class="fas fa-image"></i>
                   </span>
-                  <span>SLAM Pipeline</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/SLAM-Dunk-Prometheus/Segmentation" class="button is-light is-rounded">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Segmentation</span>
+                  <span>데모 패널</span>
                 </a>
               </span>
               <span class="link-block">
@@ -59,7 +51,15 @@
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>GitHub Organization</span>
+                  <span>GitHub</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#demo-video" class="button is-light is-rounded">
+                  <span class="icon">
+                    <i class="fas fa-video"></i>
+                  </span>
+                  <span>데모 영상</span>
                 </a>
               </span>
             </div>
@@ -69,22 +69,27 @@
     </div>
   </section>
 
-  <!-- Abstract -->
+  <!-- 개요 -->
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title">Overview</h2>
+          <h2 class="title">개요</h2>
           <div class="content has-text-justified">
             <p>
-              SLAM-Dunk-Prometheus is a comprehensive robotics perception system that combines real-time LiDAR-IMU SLAM 
-              with state-of-the-art 3D semantic segmentation. Our pipeline enables accurate localization, mapping, 
-              and scene understanding for autonomous systems and robotics applications.
+              SLAM-Dunk-Prometheus는 실시간 LiDAR-IMU SLAM과 최첨단 3D 의미론적 세그멘테이션을 결합한 
+              종합적인 로봇 인식 시스템입니다. 본 파이프라인은 자율 시스템과 로봇 응용 분야를 위한 
+              정확한 위치 추정, 맵 구축, 장면 이해를 가능하게 합니다.
             </p>
             <p>
-              The system consists of two main components: a robust SLAM pipeline for real-time pose estimation and 
-              map building, and an advanced segmentation module that provides semantic understanding of 3D environments 
-              using cutting-edge deep learning models.
+              이 시스템은 두 가지 주요 구성 요소로 이루어져 있습니다. 실시간 포즈 추정 및 맵 구축을 위한 
+              강력한 SLAM 파이프라인과 최첨단 딥러닝 모델을 사용하여 3D 환경에 대한 의미론적 이해를 
+              제공하는 고급 세그멘테이션 모듈입니다.
+            </p>
+            <p>
+              StrayScanner 데이터셋을 기반으로 개발되었으며, 실시간 성능과 높은 정확도를 동시에 달성하는 
+              것을 목표로 합니다. 각 모듈은 독립적으로 사용하거나 통합하여 완전한 장면 이해 시스템을 
+              구축할 수 있습니다.
             </p>
           </div>
         </div>
@@ -92,16 +97,16 @@
     </div>
   </section>
 
-  <!-- Demo Panel -->
-  <section class="section">
+  <!-- 데모 패널 -->
+  <section class="section" id="demo-panel">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title">Demo Panel</h2>
+          <h2 class="title">데모 패널</h2>
           <div class="image-container">
-            <img src="panel/slamdunk_panel.png" alt="SLAM-Dunk Demo Panel" class="panel-image" />
+            <img src="panel/slamdunk_panel.png" alt="SLAM-Dunk 데모 패널" class="panel-image" />
             <p style="font-size: 0.9rem; color: #888; margin-top: 1rem;">
-              Real-time SLAM results and segmentation visualizations
+              실시간 SLAM 결과 및 세그멘테이션 시각화
             </p>
           </div>
         </div>
@@ -109,53 +114,68 @@
     </div>
   </section>
 
-  <!-- System Architecture -->
+  <!-- 시스템 아키텍처 -->
   <section class="section" style="background-color: #fafafa;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title has-text-centered">System Modules</h2>
+          <h2 class="title has-text-centered">시스템 모듈</h2>
           
           <div class="module-card">
-            <h3><i class="fas fa-compass"></i> SLAM Pipeline</h3>
+            <h3>SLAM 파이프라인</h3>
             <div class="content">
               <p>
-                Real-time LiDAR-IMU SLAM system optimized for the StrayScanner dataset. 
-                Features include:
+                StrayScanner 데이터셋에 최적화된 실시간 LiDAR-IMU SLAM 시스템입니다. 
+                주요 기능은 다음과 같습니다.
               </p>
               <ul>
-                <li>High-frequency LiDAR and IMU sensor fusion</li>
-                <li>Real-time pose estimation and trajectory optimization</li>
-                <li>Efficient point cloud processing and map building</li>
-                <li>Comprehensive data preprocessing and post-processing tools</li>
+                <li><strong>센서 융합:</strong> 고주파 LiDAR와 IMU 센서 데이터를 실시간으로 융합하여 정확한 위치 추정</li>
+                <li><strong>포즈 추정:</strong> 실시간 포즈 추정 및 궤적 최적화를 통한 정밀한 로봇 위치 추적</li>
+                <li><strong>포인트 클라우드 처리:</strong> 효율적인 포인트 클라우드 처리 및 3D 맵 구축</li>
+                <li><strong>데이터 전처리:</strong> 포괄적인 데이터 전처리 및 후처리 도구 제공</li>
+                <li><strong>실시간 성능:</strong> 최적화된 알고리즘으로 실시간 처리 가능</li>
               </ul>
+              <p style="margin-top: 1rem;">
+                <strong>기술적 특징:</strong> 본 SLAM 파이프라인은 LiDAR_IMU_SLAM.py를 통해 실행되며, 
+                depth 맵과 confidence 맵을 활용하여 높은 정확도의 3D 맵을 생성합니다. 
+                post_processor.py를 통해 데이터 통합 및 후처리를 수행할 수 있습니다.
+              </p>
               <div class="tag-container">
                 <span class="tag is-info">Python</span>
                 <span class="tag is-info">LiDAR</span>
                 <span class="tag is-info">IMU</span>
-                <span class="tag is-info">Real-time</span>
+                <span class="tag is-info">실시간</span>
+                <span class="tag is-info">포인트 클라우드</span>
               </div>
             </div>
           </div>
 
           <div class="module-card">
-            <h3><i class="fas fa-brain"></i> 3D Segmentation</h3>
+            <h3>3D 세그멘테이션</h3>
             <div class="content">
               <p>
-                Advanced 3D semantic segmentation using state-of-the-art deep learning models. 
-                Capabilities include:
+                최첨단 딥러닝 모델을 사용한 고급 3D 의미론적 세그멘테이션 시스템입니다. 
+                주요 기능은 다음과 같습니다.
               </p>
               <ul>
-                <li>Mosaic3D and OpenScene model integration</li>
-                <li>Real-time point cloud semantic labeling</li>
-                <li>Interactive visualization tools for segmented scenes</li>
-                <li>Comprehensive demo codes for easy deployment</li>
+                <li><strong>Mosaic3D 통합:</strong> Mosaic3D 모델을 활용한 고정밀 3D 세그멘테이션</li>
+                <li><strong>OpenScene 지원:</strong> OpenScene 모델을 통한 다양한 장면 이해</li>
+                <li><strong>실시간 레이블링:</strong> 포인트 클라우드의 실시간 의미론적 레이블링</li>
+                <li><strong>대화형 시각화:</strong> 세그멘테이션된 장면을 위한 대화형 시각화 도구</li>
+                <li><strong>쉬운 배포:</strong> 종합적인 데모 코드로 간편한 배포 가능</li>
               </ul>
+              <p style="margin-top: 1rem;">
+                <strong>기술적 특징:</strong> 본 모듈은 convert_stray.py를 통해 StrayScanner 데이터를 
+                세그멘테이션 모델에 적합한 형식으로 변환합니다. Mosaic3D와 OpenScene 모델을 모두 지원하여 
+                다양한 환경에서 높은 정확도의 세그멘테이션을 제공합니다.
+              </p>
               <div class="tag-container">
                 <span class="tag is-success">Python</span>
-                <span class="tag is-success">Deep Learning</span>
-                <span class="tag is-success">3D Vision</span>
-                <span class="tag is-success">Semantic Segmentation</span>
+                <span class="tag is-success">딥러닝</span>
+                <span class="tag is-success">3D 비전</span>
+                <span class="tag is-success">의미론적 세그멘테이션</span>
+                <span class="tag is-success">Mosaic3D</span>
+                <span class="tag is-success">OpenScene</span>
               </div>
             </div>
           </div>
@@ -164,62 +184,106 @@
     </div>
   </section>
 
-  <!-- Demo Video -->
-  <section class="section">
+  <!-- 데모 영상 -->
+  <section class="section" id="demo-video">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title">Demo Video</h2>
+          <h2 class="title">데모 영상</h2>
           <div class="video-container">
             <video controls>
               <source src="video/Seg_demo.mp4" type="video/mp4">
-              Your browser does not support the video tag.
+              브라우저가 비디오 태그를 지원하지 않습니다.
             </video>
           </div>
           <p style="font-size: 0.9rem; color: #888; margin-top: 1rem; text-align: center;">
-            Complete pipeline demonstration showing SLAM and segmentation in action
+            SLAM과 세그멘테이션이 작동하는 전체 파이프라인 시연
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technical Details -->
+  <!-- 핵심 개념 -->
   <section class="section" style="background-color: #fafafa;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title has-text-centered">Technical Highlights</h2>
+          <h2 class="title has-text-centered">핵심 개념</h2>
+          <div class="content has-text-justified">
+            
+            <h3 style="color: #667eea; margin-top: 2rem;">SLAM이란?</h3>
+            <p>
+              SLAM(Simultaneous Localization And Mapping)은 로봇이나 자율주행 차량이 미지의 환경에서 
+              동시에 자신의 위치를 파악하고 주변 환경의 지도를 작성하는 기술입니다. 본 프로젝트에서는 
+              LiDAR(Light Detection And Ranging) 센서와 IMU(Inertial Measurement Unit)를 융합하여 
+              3차원 공간에서의 정밀한 위치 추정과 맵 구축을 수행합니다.
+            </p>
+
+            <h3 style="color: #667eea; margin-top: 2rem;">LiDAR-IMU 센서 융합</h3>
+            <p>
+              LiDAR는 레이저를 사용하여 주변 환경까지의 거리를 측정하는 센서로, 정밀한 3D 포인트 클라우드 
+              데이터를 제공합니다. IMU는 가속도계와 자이로스코프를 포함하여 로봇의 움직임과 방향을 측정합니다. 
+              이 두 센서를 융합함으로써 각 센서의 장점을 살리고 단점을 보완하여 더 정확하고 안정적인 
+              위치 추정이 가능합니다.
+            </p>
+
+            <h3 style="color: #667eea; margin-top: 2rem;">3D 의미론적 세그멘테이션</h3>
+            <p>
+              3D 의미론적 세그멘테이션은 3차원 포인트 클라우드의 각 점에 의미론적 레이블(예: 벽, 바닥, 가구, 
+              사람 등)을 할당하는 작업입니다. 본 프로젝트는 Mosaic3D와 OpenScene 같은 최신 딥러닝 모델을 
+              활용하여 실시간으로 3D 장면을 이해하고 분류합니다. 이를 통해 로봇은 단순히 장애물의 위치뿐만 
+              아니라 그것이 무엇인지까지 이해할 수 있습니다.
+            </p>
+
+            <h3 style="color: #667eea; margin-top: 2rem;">StrayScanner 데이터셋</h3>
+            <p>
+              StrayScanner는 모바일 기기를 사용하여 수집한 실내 환경 데이터셋입니다. RGB 영상, depth 맵, 
+              IMU 데이터, odometry 정보를 포함하며, 본 프로젝트는 이 데이터셋을 활용하여 실시간 SLAM 및 
+              세그멘테이션 알고리즘을 개발하고 검증합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 기술적 세부사항 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title has-text-centered">기술적 특징</h2>
           <div class="content has-text-justified">
             <div class="columns">
               <div class="column">
-                <h3 style="color: #667eea;"><i class="fas fa-rocket"></i> Performance</h3>
+                <h3 style="color: #667eea;">성능</h3>
                 <p>
-                  Optimized for real-time operation with efficient algorithms and parallel processing. 
-                  Achieves high frame rates while maintaining accuracy in pose estimation and segmentation.
+                  효율적인 알고리즘과 병렬 처리로 실시간 작동을 위해 최적화되었습니다. 
+                  포즈 추정과 세그멘테이션에서 높은 정확도를 유지하면서도 높은 프레임 레이트를 달성합니다.
                 </p>
               </div>
               <div class="column">
-                <h3 style="color: #667eea;"><i class="fas fa-database"></i> Dataset Support</h3>
+                <h3 style="color: #667eea;">데이터셋 지원</h3>
                 <p>
-                  Built specifically for the StrayScanner dataset but extensible to other LiDAR-IMU datasets. 
-                  Includes comprehensive preprocessing tools for data preparation.
+                  StrayScanner 데이터셋에 특화되어 구축되었지만 다른 LiDAR-IMU 데이터셋으로 확장 가능합니다. 
+                  데이터 준비를 위한 포괄적인 전처리 도구를 포함합니다.
                 </p>
               </div>
             </div>
             <div class="columns">
               <div class="column">
-                <h3 style="color: #667eea;"><i class="fas fa-cogs"></i> Modular Design</h3>
+                <h3 style="color: #667eea;">모듈식 설계</h3>
                 <p>
-                  Separated SLAM and segmentation modules allow flexible integration. 
-                  Each component can be used independently or combined for complete scene understanding.
+                  SLAM과 세그멘테이션 모듈이 분리되어 있어 유연한 통합이 가능합니다. 
+                  각 구성 요소를 독립적으로 사용하거나 결합하여 완전한 장면 이해 시스템을 구축할 수 있습니다.
                 </p>
               </div>
               <div class="column">
-                <h3 style="color: #667eea;"><i class="fas fa-code"></i> Open Source</h3>
+                <h3 style="color: #667eea;">오픈 소스</h3>
                 <p>
-                  All code is publicly available on GitHub under permissive licenses. 
-                  Comprehensive documentation and demo codes facilitate easy adoption.
+                  모든 코드는 GitHub에서 허용적인 라이선스로 공개되어 있습니다. 
+                  종합적인 문서와 데모 코드로 쉽게 적용할 수 있습니다.
                 </p>
               </div>
             </div>
@@ -229,22 +293,55 @@
     </div>
   </section>
 
-  <!-- Getting Started -->
-  <section class="section">
+  <!-- 시작하기 -->
+  <section class="section" style="background-color: #fafafa;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 class="title has-text-centered">Getting Started</h2>
+          <h2 class="title has-text-centered">시작하기</h2>
           <div class="content">
-            <h3>SLAM Pipeline</h3>
+            <h3>SLAM 파이프라인</h3>
             <pre><code>git clone https://github.com/SLAM-Dunk-Prometheus/SLAM-Pipeline.git
 cd SLAM-Pipeline
-# Follow installation instructions in the repository README</code></pre>
+# 저장소 README의 설치 지침을 따르세요
 
-            <h3>3D Segmentation</h3>
+# 환경 설정
+conda create -n slam-pipeline python=3.9
+conda activate slam-pipeline
+pip install -r requirements.txt
+
+# SLAM 실행
+python LiDAR_IMU_SLAM.py data/
+
+# 데이터 전처리
+python post_processor.py data/ --integrate</code></pre>
+
+            <h3>3D 세그멘테이션</h3>
             <pre><code>git clone https://github.com/SLAM-Dunk-Prometheus/Segmentation.git
 cd Segmentation
-# Follow installation instructions in the repository README</code></pre>
+# 저장소 README의 설치 지침을 따르세요
+
+# StrayScanner 데이터 변환
+python convert_stray.py
+
+# 세그멘테이션 데모 실행
+cd mosaic3d
+# 데모 코드 실행</code></pre>
+
+            <h3>데이터 구조</h3>
+            <p>StrayScanner 데이터는 다음과 같은 구조로 구성됩니다.</p>
+            <pre><code>data/
+├── rgb.mp4              # RGB 영상
+├── camera_matrix.csv    # 카메라 행렬
+├── odometry.csv         # 오도메트리 데이터
+├── imu.csv              # IMU 데이터
+├── depth/               # Depth 맵
+│   ├── 000000.npy
+│   ├── 000001.npy
+│   └── ...
+└── confidence/          # Depth confidence 맵
+    ├── 000000.png
+    └── ...</code></pre>
           </div>
         </div>
       </div>
@@ -256,7 +353,7 @@ cd Segmentation
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          <strong>SLAM-Dunk-Prometheus</strong> by the Prometheus Team
+          <strong>SLAM-Dunk-Prometheus</strong> by Prometheus Team
         </p>
         <p>
           <a href="https://github.com/SLAM-Dunk-Prometheus">
@@ -264,7 +361,7 @@ cd Segmentation
           </a>
         </p>
         <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
-          Website template based on <a href="https://nerfies.github.io/">Nerfies</a>.
+          웹사이트 템플릿은 <a href="https://nerfies.github.io/">Nerfies</a>를 기반으로 합니다.
         </p>
       </div>
     </div>
