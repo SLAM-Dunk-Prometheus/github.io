@@ -316,8 +316,7 @@
                 <div class="column">
                   <p><strong>Goal</strong></p>
                   <ul>
-                    <li>iPhone LiDAR + IMU + Camera라는 제한된 센서만으로</li>
-                    <li>실내 공간을 3D로 재구성</li>
+                    <li>iPhone LiDAR + IMU + Camera라는 제한된 센서만으로 실내 공간을 3D로 재구성
                     <li>공간/물체의 의미를 추론</li>
                     <li>“여긴 뭐야?”, “어디를 걸어갈 수 있어?” 같은 질문에 반응하는 기능 구현</li>
                   </ul>
@@ -348,7 +347,7 @@
 
               <article class="message is-info is-light">
                 <div class="message-header">
-                  <p>Step 0. iPhone Scan Output: “Raw Sensor Logs”</p>
+                  <p>Step 0. iPhone Scan Output</p>
                 </div>
                 <div class="message-body">
                   <p><strong>What you get after a quick scan</strong></p>
@@ -360,23 +359,22 @@
                   </ul>
                   <p style="margin-top: 0.75rem;"><strong>Key point</strong></p>
                   <ul>
-                    <li>이 시점에는 “완성된 3D 지도”가 존재하지 않음</li>
                     <li>각 프레임이 서로 어떤 위치 관계인지 모르는 상태</li>
                     <li>프레임을 단순히 쌓으면 3D가 뒤틀리고 누적 오차가 커짐</li>
-                    <li>다음 단계에서 “카메라가 어떻게 움직였는지”를 복원해야 함</li>
+                    <li>다음 SLAM 단계에서 '카메라가 어떻게 움직였는지'를 복원해야 함</li>
                   </ul>
                 </div>
               </article>
 
               <article class="message is-link is-light">
                 <div class="message-header">
-                  <p>Step 1. Geometry SLAM (Depth + IMU): “Motion Recovery”</p>
+                  <p>Step 1. Geometry SLAM (Depth + IMU)</p>
                 </div>
                 <div class="message-body">
                   <p><strong>Purpose</strong></p>
                   <ul>
                     <li>Depth/IMU만으로 카메라 이동을 추정</li>
-                    <li>프레임들을 하나의 좌표계로 “정합 가능한 상태”로 만드는 단계</li>
+                    <li>프레임들을 하나의 좌표계로 정합 가능한 상태로 만드는 단계</li>
                     <li>3D 재구성에 필요한 pose(경로) 획득</li>
                   </ul>
 
@@ -397,21 +395,19 @@
                   <p style="margin-top: 0.75rem;"><strong>Output</strong></p>
                   <ul>
                     <li>Refined camera trajectory (poses)</li>
-                    <li>이후 TSDF/프로젝션 단계의 기준 좌표계</li>
                   </ul>
                 </div>
               </article>
 
               <article class="message is-success is-light">
                 <div class="message-header">
-                  <p>Step 2. 3D Reconstruction: “Build the Map”</p>
+                  <p>Step 2. 3D Reconstruction</p>
                 </div>
                 <div class="message-body">
                   <p><strong>Purpose</strong></p>
                   <ul>
                     <li>SLAM으로 얻은 경로를 기준으로 depth를 하나의 좌표계로 통합</li>
                     <li>실내 공간을 3D mesh / point cloud로 생성</li>
-                    <li>노이즈 제거 및 정제로 “사용 가능한 지도” 품질 확보</li>
                   </ul>
 
                   <p style="margin-top: 0.75rem;"><strong>What happens</strong></p>
@@ -425,20 +421,19 @@
                   <ul>
                     <li>Refined mesh (3D surface)</li>
                     <li>Refined point cloud (3D points)</li>
-                    <li>후속 단계 입력 품질을 위한 refined dataset 재생성</li>
                   </ul>
                 </div>
               </article>
 
               <article class="message is-warning is-light">
                 <div class="message-header">
-                  <p>Step 3. Geometry-only Segmentation (Mosaic3D): “Stable Structural Anchors”</p>
+                  <p>Step 3. Geometry-only Segmentation (Mosaic3D)
                 </div>
                 <div class="message-body">
                   <p><strong>Purpose</strong></p>
                   <ul>
-                    <li>RGB 없이 형상 정보만으로 semantic segmentation 시도</li>
-                    <li>바닥/벽/천장처럼 구조적으로 확실한 요소를 안정적으로 확보</li>
+                    <li><strong>RGB 없이 형상 정보만으로</strong> semantic segmentation 시도</li>
+                    <li><strong>바닥/벽/천장처럼 구조적으로 확실한 요소를 안정적으로 확보</strong></li>
                   </ul>
 
                   <p style="margin-top: 0.75rem;"><strong>Strength</strong></p>
@@ -451,7 +446,6 @@
                   <ul>
                     <li>작은 공간에 물체가 밀집된 환경에서는 성능 저하</li>
                     <li>작은 물체들은 형상만으로 구분이 어려움</li>
-                    <li>구조적 의미는 괜찮지만 object-level 의미가 약해질 수 있음</li>
                   </ul>
 
                   <p style="margin-top: 0.75rem;"><strong>Output</strong></p>
@@ -464,13 +458,13 @@
 
               <article class="message is-danger is-light">
                 <div class="message-header">
-                  <p>Step 4. Open-vocabulary Features (OpenScene): “Objects + Language”</p>
+                  <p>Step 4. Open-vocabulary Features (OpenScene)</p>
                 </div>
                 <div class="message-body">
                   <p><strong>Purpose</strong></p>
                   <ul>
-                    <li>RGB 기반 appearance 단서로 작은 물체 구분 강화</li>
-                    <li>텍스트 질의(“bed”, “chair”, “bag”)에 반응하는 feature 생성</li>
+                    <li><strong>RGB 기반 appearance 단서로</strong> 작은 물체 구분 강화</li>
+                    <li>텍스트 질의(bed, chair, bag)에 반응하는 feature 생성</li>
                     <li>질의 기반 의미 탐색(query-driven semantic search)까지 확장</li>
                   </ul>
 
@@ -496,14 +490,14 @@
 
               <article class="message is-primary is-light">
                 <div class="message-header">
-                  <p>Step 5. Fusion: “Structure (Geometry) + Objects (Open-vocab)”</p>
+                  <p>Step 5. Fusion: Structure (Geometry) + Objects (Open-vocab)</p>
                 </div>
                 <div class="message-body">
                   <p><strong>Why fusion</strong></p>
                   <ul>
                     <li>Geometry-only는 구조물에 강함, 작은 물체에 약함</li>
                     <li>Open-vocab는 물체에 강함, 구조적 안정성이 흔들릴 수 있음</li>
-                    <li>둘을 결합해 “로봇처럼 쓸 수 있는 의미 지도”를 목표로 함</li>
+                    <li>둘을 결합해 전체적으로 안정성 높은 Semantic map을 목표로 함</li>
                   </ul>
 
                   <p style="margin-top: 0.75rem;"><strong>Fusion strategy (high-level)</strong></p>
@@ -521,15 +515,15 @@
                 </div>
               </article>
 
-              <article class="message is-dark is-light">
+              <article class="message is-info is-light">
                 <div class="message-header">
-                  <p>Step 6. Interactive Demo (viser): “Ask the Map”</p>
+                  <p>Step 6. Interactive Demo (viser): Ask the Map</p>
                 </div>
                 <div class="message-body">
                   <p><strong>Purpose</strong></p>
                   <ul>
-                    <li>연구 결과를 비전공자도 직관적으로 이해할 수 있게 시각화</li>
-                    <li>“로봇처럼 공간이 답하는 느낌”을 빠르게 체감시키는 데모</li>
+                    <li>연구 결과를 직관적으로 이해할 수 있게 시각화</li>
+                    <li>로봇처럼 공간이 답하는 느낌</li>
                   </ul>
 
                   <p style="margin-top: 0.75rem;"><strong>Interaction</strong></p>
@@ -552,7 +546,7 @@
 
               <div class="notification is-light" style="margin-top: 1.25rem;">
                 <p><strong>Data Transformation Summary</strong></p>
-                <p style="margin-top: 0.25rem;">From sensor logs → to “robot-readable” map</p>
+                <p style="margin-top: 0.25rem;">From raw sensor data → to robot-readable map</p>
                 <ul style="margin-top: 0.5rem;">
                   <li>Raw depth/RGB/IMU (연속 프레임)</li>
                   <li>Geometry SLAM (이동 경로 복원)</li>
