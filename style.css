@@ -4,7 +4,7 @@ body {
 
 .hero-body {
   padding: 3rem 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0b1020 0%, #0f2a5f 45%, #00c6ff 100%);
 }
 
 .publication-title {
@@ -150,4 +150,25 @@ footer {
 .panel-image {
   max-width: 70%;
   height: auto;
+}
+
+
+/* Pipeline step images */
+.pipeline-figure {
+  margin: 0;
+}
+
+.pipeline-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+
+.pipeline-caption {
+  margin-top: 0.55rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  letter-spacing: 0.2px;
 }
